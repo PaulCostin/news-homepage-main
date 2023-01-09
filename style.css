@@ -157,6 +157,24 @@ body {
     color: hsl(233, 8%, 79%);
 }
 
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: initial;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
 /* Active States */
 
 
@@ -187,14 +205,13 @@ body {
         margin-left: 6%;
         margin-right: 6%;
     }
-
-
 }
 
 @media screen and (max-width:860px) {
     #article {
         grid-template-columns: 1fr;
     }
+
 
     .article-title>h1 {
         padding: 0 50px 0 0;
@@ -225,6 +242,10 @@ body {
 }
 
 @media screen and (max-width:700px) {
+    body {
+        position: relative;
+    }
+
     .article-left>img {
         content: url("assets/images/image-web-3-mobile.jpg");
     }
@@ -243,6 +264,45 @@ body {
     #navForMobile>img {
         height: 25px;
         width: 40px;
+    }
+
+    #navigationMenu {
+        position: fixed;
+        right: 0;
+        top: 0px;
+        width: 60%;
+        height: 100%;
+        float: right;
+        background-color: hsl(36, 100%, 99%);
+        transition: right 0.5 ease-out;
+        z-index: 10;
+    }
+
+    #menuClose {
+        position: fixed;
+        top: 55px;
+        right: 50px;
+    }
+
+    .anchor-links {
+        position: fixed;
+        top: 100px;
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .anchor-links>a {
+        margin-top: 35px;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .anchor-links>a,
+    .anchor-links>a:visited {
+        color: hsl(236, 13%, 42%);
     }
 }
 

@@ -20,6 +20,21 @@
     <title>News homepage</title>
   </head>
   <body>
+    <div id="navigationMenu" class="hidden">
+      <img
+        src="assets/images/icon-menu-close.svg"
+        onclick="toggleMenu()"
+        alt=""
+        id="menuClose"
+      />
+      <div class="anchor-links">
+        <a class="anchor" href="#">Home</a>
+        <a class="anchor" href="#">New</a>
+        <a class="anchor" href="#">Popular</a>
+        <a class="anchor" href="#">Trending</a>
+        <a class="anchor" href="#">Categories</a>
+      </div>
+    </div>
     <!-- navigation for desktop -->
     <nav id="navForDesktop">
       <div class="nav-left"><img src="assets/images/logo.svg" alt="" /></div>
@@ -36,7 +51,6 @@
       <div class="nav-left"><img src="assets/images/logo.svg" alt="" /></div>
       <img src="assets/images/icon-menu.svg" onclick="toggleMenu()" alt="" />
     </nav>
-
     <div id="article">
       <div class="article-left">
         <img src="assets/images/image-web-3-desktop.jpg" alt="" />
