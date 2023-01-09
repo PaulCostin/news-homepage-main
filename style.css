@@ -247,6 +247,7 @@ body {
     }
 
     .article-left>img {
+        z-index: 1;
         content: url("assets/images/image-web-3-mobile.jpg");
     }
 
